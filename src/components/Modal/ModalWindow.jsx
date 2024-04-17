@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Reviews } from '../reviews/Reviews';
 import { Feature } from '../feature/Feature';
 
-export const Modal = ({ setOpen, open, vehicle }) => {
+export const ModalWindow = ({ setOpen, open, vehicle }) => {
   const [openFeature, setOpenFeature] = useState(true);
   const [openReviews, setOpenReviews] = useState(false);
   return (
