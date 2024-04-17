@@ -1,16 +1,15 @@
-import { HeartIcon } from "@heroicons/react/24/outline";
-import { StarIcon } from "@heroicons/react/24/solid";
-import { MapPinIcon } from "@heroicons/react/24/outline";
-import { Details } from "../details/Details";
-import { useState } from "react";
-import { Modal } from "../modal/Modal";
-import { useUpdateVehicleMutation } from "../../redux/CarsSlice";
+import { HeartIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon } from '@heroicons/react/24/outline';
+import { Details } from '../details/Details';
+import { useState } from 'react';
+import { Modal } from 'components/modal/Modal';
+import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
   const [open, setOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(vehicle.favorites);
-
 
   const handleUpdateFavorites = async () => {
     try {
@@ -18,13 +17,13 @@ export const Card = ({ vehicle }) => {
       await updateVehicle({ id: vehicle.id, favorites: updatedFavorites });
       setIsFavorite(updatedFavorites);
     } catch (error) {
-      console.error("Error updating favorites:", error);
+      console.error('Error updating favorites:', error);
     }
   };
   return (
     <>
       <Modal setOpen={setOpen} open={open} vehicle={vehicle} />
-      <li  className="  grid items-center grid-cols-7 p-6 gap-6 border border-VehicleBlack rounded-md">
+      <li className="  grid items-center grid-cols-7 p-6 gap-6 border border-VehicleBlack rounded-md">
         <div className="col-span-3">
           <img
             src={vehicle.gallery[0]}
@@ -39,12 +38,12 @@ export const Card = ({ vehicle }) => {
             <h2 className="text-VehicleBlack-100 text-2xl">{vehicle.name}</h2>
             <div className="flex items-center gap-3 ">
               <p className="text-VehicleBlack-100 text-2xl">{`$${
-                vehicle.price + ".00"
+                vehicle.price + '.00'
               } `}</p>
               <HeartIcon
                 onClick={handleUpdateFavorites}
                 className={`w-6 h-6 text-VehicleBlack-100 hover:text-VehicleRed cursor-pointer hover:fill-VehicleRed focus:fill-VehicleRed ${
-                  isFavorite ? "fill-VehicleRed text-VehicleRed" : ""
+                  isFavorite ? 'fill-VehicleRed text-VehicleRed' : ''
                 }`}
               />
             </div>
@@ -67,7 +66,9 @@ export const Card = ({ vehicle }) => {
           <ul className="flex items-center flex-wrap gap-2">
             {Object.keys(vehicle.details).map((feature, index) => {
               const values = Object.values(vehicle.details);
-              return <Details key={index} feature={feature} value={values[index]} />;
+              return (
+                <Details key={index} feature={feature} value={values[index]} />
+              );
             })}
           </ul>
           <button
