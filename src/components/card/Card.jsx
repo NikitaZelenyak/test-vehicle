@@ -49,9 +49,9 @@ export const Card = ({ vehicle }) => {
             </div>
           </div>
           <div className="mt-2">
-            <div className="flex items-center gap-1">
-              <StarIcon className="w-4 h-4 fill-VehicleYellow" />
-              <p>
+            <div className="flex items-center gap-1 ">
+              <StarIcon className="w-4 h-4 fill-VehicleYellow underline" />
+              <p className='underline'>
                 <span>{vehicle.rating}</span>({vehicle.reviews.length} Reviews)
               </p>
               <div className=" ml-3 flex items-center gap-[2px]">
