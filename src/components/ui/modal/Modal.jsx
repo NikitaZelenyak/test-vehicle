@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Reviews } from '../reviews/Reviews';
 import { Feature } from '../feature/Feature';
 
-export const ModalWindow = ({ setOpen, open, vehicle }) => {
+export const Modal = ({ setOpen, open, vehicle }) => {
   const [openFeature, setOpenFeature] = useState(true);
   const [openReviews, setOpenReviews] = useState(false);
   return (
@@ -49,7 +49,7 @@ export const ModalWindow = ({ setOpen, open, vehicle }) => {
                     <div className="flex items-center gap-1">
                       <StarIcon className="w-4 h-4 fill-VehicleYellow" />
                       <p>
-                        <span>{vehicle.rating}</span>({vehicle.reviews.length}{' '}
+                        <span>{vehicle.rating}</span>({vehicle.reviews.length}
                         Reviews)
                       </p>
                       <div className=" ml-3 flex items-center gap-[2px]">

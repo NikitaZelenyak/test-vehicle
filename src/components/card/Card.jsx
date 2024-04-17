@@ -4,7 +4,7 @@ import { MapPinIcon } from '@heroicons/react/24/outline';
 import { Details } from '../details/Details';
 import { useState } from 'react';
 import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
-import { ModalWindow } from '../../components/modal/ModalWindow';
+import { Modal } from 'components/ui/modal/Modal';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
@@ -22,7 +22,7 @@ export const Card = ({ vehicle }) => {
   };
   return (
     <>
-      <ModalWindow setOpen={setOpen} open={open} vehicle={vehicle} />
+      <Modal setOpen={setOpen} open={open} vehicle={vehicle} />
       <li className="  grid items-center grid-cols-7 p-6 gap-6 border border-VehicleBlack rounded-md">
         <div className="col-span-3">
           <img
