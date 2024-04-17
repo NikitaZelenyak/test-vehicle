@@ -8,7 +8,7 @@ import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(vehicle.favorites);
 
   const handleUpdateFavorites = async () => {
@@ -71,13 +71,13 @@ export const Card = ({ vehicle }) => {
               );
             })}
           </ul>
-          <button
+          {/* <button
             onClick={() => setOpen(true)}
             type="button"
             className=" mt-6 bg-VehicleRed text-VehicleWhite text-base py-4 px-10 rounded-full hover:bg-VehicleRed-100 ease-in-out duration-300 "
           >
             Show More
-          </button>
+          </button> */}
         </div>
       </li>
     </>
