@@ -1,11 +1,12 @@
-import { Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { IoMdClose } from "react-icons/io";
-import { StarIcon } from "@heroicons/react/24/solid";
-import { MapPinIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import { Reviews } from "../reviews/Reviews";
-import { Feature } from "../feature/Feature";
+import { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { IoMdClose } from 'react-icons/io';
+import { StarIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
+import { Reviews } from '../reviews/Reviews';
+import { Feature } from '../feature/Feature';
+
 export const Modal = ({ setOpen, open, vehicle }) => {
   const [openFeature, setOpenFeature] = useState(true);
   const [openReviews, setOpenReviews] = useState(false);
@@ -48,7 +49,7 @@ export const Modal = ({ setOpen, open, vehicle }) => {
                     <div className="flex items-center gap-1">
                       <StarIcon className="w-4 h-4 fill-VehicleYellow" />
                       <p>
-                        <span>{vehicle.rating}</span>({vehicle.reviews.length}{" "}
+                        <span>{vehicle.rating}</span>({vehicle.reviews.length}{' '}
                         Reviews)
                       </p>
                       <div className=" ml-3 flex items-center gap-[2px]">
@@ -57,14 +58,14 @@ export const Modal = ({ setOpen, open, vehicle }) => {
                       </div>
                     </div>
                     <p className="text-VehicleBlack-100 text-2xl">{`$${
-                      vehicle.price + ".00"
+                      vehicle.price + '.00'
                     } `}</p>
                   </div>
                   <div className="grid grid-cols-3 gap-4 mt-6">
-                    {vehicle.gallery.map((image,index) => {
+                    {vehicle.gallery.map((image, index) => {
                       return (
                         <img
-                        key={index}
+                          key={index}
                           src={image}
                           alt=""
                           className="w-full h-full rounded-md"
@@ -83,7 +84,7 @@ export const Modal = ({ setOpen, open, vehicle }) => {
                       setOpenReviews(false);
                     }}
                     className={`pb-6 mr-6 ${
-                      openFeature ? "border-b-4 border-VehicleRed" : ""
+                      openFeature ? 'border-b-4 border-VehicleRed' : ''
                     } `}
                     type="button"
                   >
@@ -95,7 +96,7 @@ export const Modal = ({ setOpen, open, vehicle }) => {
                       setOpenReviews(true);
                     }}
                     className={`pb-6 ${
-                      openReviews ? "border-b-4 border-VehicleRed" : ""
+                      openReviews ? 'border-b-4 border-VehicleRed' : ''
                     } `}
                     type="button"
                   >

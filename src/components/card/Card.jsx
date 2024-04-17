@@ -3,8 +3,8 @@ import { StarIcon } from '@heroicons/react/24/solid';
 import { MapPinIcon } from '@heroicons/react/24/outline';
 import { Details } from '../details/Details';
 import { useState } from 'react';
-import { Modal } from 'components/modal/Modal';
 import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
+import { Modal } from '../modal/Modal';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
