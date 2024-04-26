@@ -26,6 +26,7 @@ export const VehicleForm = () => {
           alert("Form Submitted");
           actions.setSubmitting(false);
           actions.resetForm();
+          window.location.reload();
         }}
       >
         {({ isSubmitting }) => (

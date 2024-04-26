@@ -1,5 +1,5 @@
 import React from "react";
-import { VehicleForm } from "../form/VehicleForm";
+import { VehicleForm } from "../Form/VehicleForm";
 import { StarIcon } from "@heroicons/react/20/solid";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

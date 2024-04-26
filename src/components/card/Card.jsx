@@ -1,10 +1,10 @@
 import { HeartIcon } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { MapPinIcon } from '@heroicons/react/24/outline';
-import { Details } from '../details/Details';
+import { Details } from '../Details/Details';
 import { useState } from 'react';
 import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
-import { Modal } from 'components/ui/modal/Modal';
+import { Modal } from 'components/UI/Modal/Modal';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
@@ -40,18 +40,19 @@ export const Card = ({ vehicle }) => {
               <p className="text-VehicleBlack-100 text-2xl">{`$${
                 vehicle.price + '.00'
               } `}</p>
-              <HeartIcon
-                onClick={handleUpdateFavorites}
-                className={`w-6 h-6 text-VehicleBlack-100 hover:text-VehicleRed cursor-pointer hover:fill-VehicleRed focus:fill-VehicleRed ${
-                  isFavorite ? 'fill-VehicleRed text-VehicleRed' : ''
-                }`}
-              />
+              <button type="button" onClick={handleUpdateFavorites}>
+                <HeartIcon
+                  className={`w-6 h-6 text-VehicleBlack-100 hover:text-VehicleRed cursor-pointer hover:fill-VehicleRed focus:fill-VehicleRed ${
+                    isFavorite ? 'fill-VehicleRed text-VehicleRed' : ''
+                  }`}
+                />
+              </button>
             </div>
           </div>
           <div className="mt-2">
             <div className="flex items-center gap-1 ">
               <StarIcon className="w-4 h-4 fill-VehicleYellow underline" />
-              <p className='underline'>
+              <p className="underline">
                 <span>{vehicle.rating}</span>({vehicle.reviews.length} Reviews)
               </p>
               <div className=" ml-3 flex items-center gap-[2px]">

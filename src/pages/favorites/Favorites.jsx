@@ -1,4 +1,4 @@
-import { CardsList } from "../../components/cardsList/CardsList";
+import { CardsList } from "../../components/CardsList/CardsList";
 
 import { useGetVehiclesQuery } from "../../redux/CarsSlice";
 export const Favorites = () => {

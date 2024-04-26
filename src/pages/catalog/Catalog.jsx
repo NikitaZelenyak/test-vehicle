@@ -1,5 +1,5 @@
-import { CardsList } from "../../components/cardsList/CardsList";
-import { FilterSection } from "../../components/filter/FilterSection";
+import { CardsList } from "../../components/CardsList/CardsList";
+import { FilterSection } from "../../components/Filter/FilterSection";
 import { useGetVehiclesQuery } from "../../redux/CarsSlice";
 import { useState } from "react";
 export const Catalog = () => {
