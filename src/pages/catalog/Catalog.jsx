@@ -1,5 +1,5 @@
 import { VehicleCardsList } from 'components/CardsList/VehicleCardsList';
-import { FilterSection } from 'components/Filter/FilterSection';
+import { VehicleFilterSection } from 'components/Filter/VehicleFilterSection';
 import { useGetVehiclesQuery } from '../../redux/CarsSlice';
 import { useState } from 'react';
 export const Catalog = () => {
@@ -11,7 +11,7 @@ export const Catalog = () => {
   return (
     <div className=" mx-auto container px-4 py-12 gap-12 grid grid-cols-3">
       <div className="col-span-1 ">
-        <FilterSection
+        <VehicleFilterSection
           filterType={filterType}
           setFilterType={setFilterType}
           setFiltersDetails={setFiltersDetails}

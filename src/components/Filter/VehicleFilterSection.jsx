@@ -1,6 +1,6 @@
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { FilterDetails } from "components/Details/FilterDetails";
-export const FilterSection = ({
+export const VehicleFilterSection = ({
   vehicles,
   setFiltersDetails,
   filtersDetails,
