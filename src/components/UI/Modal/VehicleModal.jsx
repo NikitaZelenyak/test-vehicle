@@ -4,7 +4,7 @@ import { IoMdClose } from 'react-icons/io';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { MapPinIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import { Reviews } from 'components/Reviews/Reviews';
+import { Reviews } from 'components/Reviews/ReviewsFeature';
 import { Feature } from 'components/Feature/FeatureItem';
 
 export const Modal = ({ setOpen, open, vehicle }) => {
