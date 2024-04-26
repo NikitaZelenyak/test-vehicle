@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const Header = () => {
+export const HeaderNav = () => {
   let location = useLocation();
   const [currentLink, setCurrentLink] = useState(0);
   useEffect(() => {

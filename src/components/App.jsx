@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { Header } from './Header/Header';
+import { HeaderNav } from './Header/HeaderNav';
 import { Hero } from '../pages/home/Hero';
 import { Catalog } from '../pages/catalog/Catalog';
 import { Favorites } from '../pages/favorites/Favorites';
@@ -7,7 +7,7 @@ import '../App.css';
 export const App = () => {
   return (
     <div>
-      <Header />
+      <HeaderNav />
       <Routes>
         <Route
           path="/"
