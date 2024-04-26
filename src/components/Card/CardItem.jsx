@@ -1,10 +1,10 @@
 import { HeartIcon } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { MapPinIcon } from '@heroicons/react/24/outline';
-import { Details } from '../Details/Details';
+import { Details } from '../Details/DetailsFeatures';
 import { useState } from 'react';
 import { useUpdateVehicleMutation } from '../../redux/CarsSlice';
-import { Modal } from 'components/UI/Modal/Modal';
+import { Modal } from 'components/UI/Modal/VehicleModal';
 
 export const Card = ({ vehicle }) => {
   const [updateVehicle] = useUpdateVehicleMutation();
