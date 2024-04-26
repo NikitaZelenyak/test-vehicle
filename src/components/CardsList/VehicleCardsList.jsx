@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Card } from 'components/Card/Card';
 import { useLocation } from 'react-router';
 
-export const CardsList = ({
+export const VehicleCardsList = ({
   vehicles,
   filterType,
   filtersDetails,

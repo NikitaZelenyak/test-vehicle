@@ -1,4 +1,4 @@
-import { CardsList } from 'components/CardsList/CardsList';
+import { VehicleCardsList } from 'components/CardsList/VehicleCardsList';
 import { FilterSection } from 'components/Filter/FilterSection';
 import { useGetVehiclesQuery } from '../../redux/CarsSlice';
 import { useState } from 'react';
@@ -27,7 +27,7 @@ export const Catalog = () => {
         </button>
       </div>
       <div className="col-span-2">
-        <CardsList
+        <VehicleCardsList
           setIsSubmitted={setIsSubmitted}
           isSubmitted={isSubmitted}
           filterType={filterType}
