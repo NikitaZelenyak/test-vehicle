@@ -1,7 +1,7 @@
-import { CardsList } from "../../components/CardsList/CardsList";
-import { FilterSection } from "../../components/Filter/FilterSection";
-import { useGetVehiclesQuery } from "../../redux/CarsSlice";
-import { useState } from "react";
+import { CardsList } from 'components/CardsList/CardsList';
+import { FilterSection } from 'components/Filter/FilterSection';
+import { useGetVehiclesQuery } from '../../redux/CarsSlice';
+import { useState } from 'react';
 export const Catalog = () => {
   const { data: vehicles } = useGetVehiclesQuery();
   const [filtersDetails, setFiltersDetails] = useState([]);
@@ -28,7 +28,7 @@ export const Catalog = () => {
       </div>
       <div className="col-span-2">
         <CardsList
-        setIsSubmitted={setIsSubmitted}
+          setIsSubmitted={setIsSubmitted}
           isSubmitted={isSubmitted}
           filterType={filterType}
           filtersDetails={filtersDetails}

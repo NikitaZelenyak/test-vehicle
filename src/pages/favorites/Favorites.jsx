@@ -1,6 +1,5 @@
-import { CardsList } from "../../components/CardsList/CardsList";
-
-import { useGetVehiclesQuery } from "../../redux/CarsSlice";
+import { CardsList } from 'components/CardsList/CardsList';
+import { useGetVehiclesQuery } from '../../redux/CarsSlice';
 export const Favorites = () => {
   const { data: vehicles } = useGetVehiclesQuery();
 

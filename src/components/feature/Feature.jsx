@@ -1,5 +1,5 @@
-import { VehicleForm } from '../Form/VehicleForm';
-import { Details } from '../Details/Details';
+import { VehicleForm } from 'components/Form/VehicleForm';
+import { Details } from 'components/Details/Details';
 export const Feature = ({ vehicle }) => {
   const VehicleDetails = [
     'form',
