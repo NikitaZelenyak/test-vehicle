@@ -45,6 +45,7 @@ export const CardsList = ({
         setIsSubmitted(false);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmitted, location.pathname, setIsSubmitted, vehicles]);
 
   const itemsPerPage = 4;
